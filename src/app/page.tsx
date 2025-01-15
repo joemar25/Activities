@@ -50,7 +50,7 @@ export default function HomePage() {
     <main className="flex flex-col min-h-screen p-4 bg-background">
       {/* Header with Theme Switcher */}
       <header className="w-full flex items-center justify-between p-4 border-b border-border bg-muted">
-        <h1 className="text-2xl font-bold">Welcome to Joemar Cardño&apos;s Assessment</h1>
+        <h1 className="text-2xl font-bold">Welcome to Joemar Cardiño&apos;s Assessment</h1>
         <ThemeChange />
       </header>
 
