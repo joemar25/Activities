@@ -21,6 +21,7 @@ model User {
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
+  Todo      Todo[]
 
   @@map("users")
 }
@@ -84,4 +85,16 @@ model Authenticator {
 
   @@id([userId, credentialID])
   @@map("authenticators")
+}
+
+model Todo {
+  id        String   @id @default(cuid())
+  title     String
+  completed Boolean  @default(false)
+  userId    String
+  user      User     @relation(fields: [userId], references: [id], onDelete: Cascade)
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@map("todos")
 }

@@ -1,3 +1,4 @@
+// src\hooks\auth-actions.ts
 'use server'
 
 import bcryptjs from 'bcryptjs'
@@ -64,7 +65,16 @@ export async function handleCredentialsSignin({
 }
 
 export async function handleSignOut() {
-    await signOut()
+    try {
+        // Use the default behavior of NextAuth signOut
+        return await signOut({
+            redirect: true,
+            redirectTo: '/activity8'
+        })
+    } catch (error) {
+        console.error('Sign out error:', error)
+        throw error
+    }
 }
 
 type SignUpInput = {
