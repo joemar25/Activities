@@ -17,7 +17,6 @@ model User {
   image         String?
   accounts      Account[]
   sessions      Session[]
-  // Optional for WebAuthn support
   Authenticator Authenticator[]
 
   createdAt DateTime @default(now())
@@ -38,6 +37,7 @@ model Account {
   scope             String?
   id_token          String?
   session_state     String?
+  password          String?
 
   createdAt DateTime @default(now())
   updatedAt DateTime @updatedAt
