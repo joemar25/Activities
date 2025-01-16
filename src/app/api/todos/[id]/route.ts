@@ -2,26 +2,26 @@ import { auth } from '@/lib/auth'
 import { prisma } from '@/lib/prisma'
 import { NextRequest, NextResponse } from 'next/server'
 
-type Params = {
-    params: {
+type RouteContext = {
+    params: Promise<{
         id: string;
-    };
+    }>;
 };
 
 export async function PATCH(
     request: NextRequest,
-    context: Params
+    context: RouteContext
 ) {
     const session = await auth()
     if (!session?.user) {
         return new NextResponse('Unauthorized', { status: 401 })
     }
 
-    const params = await context.params
+    const { id } = await context.params
     const json = await request.json()
     const todo = await prisma.todo.updateMany({
         where: {
-            id: params.id,
+            id,
             userId: session.user.id,
         },
         data: json,
@@ -32,17 +32,17 @@ export async function PATCH(
 
 export async function DELETE(
     request: NextRequest,
-    context: Params
+    context: RouteContext
 ) {
     const session = await auth()
     if (!session?.user) {
         return new NextResponse('Unauthorized', { status: 401 })
     }
 
-    const params = await context.params
+    const { id } = await context.params
     await prisma.todo.deleteMany({
         where: {
-            id: params.id,
+            id,
             userId: session.user.id,
         },
     })

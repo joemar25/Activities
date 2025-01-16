@@ -1,8 +1,8 @@
 'use client'
 
 import { useTheme } from 'next-themes'
-import { DropdownMenuItem } from '../../ui/dropdown-menu'
 import { Icons } from '@/components/ui/icons'
+import { DropdownMenuItem } from '@/components/ui/dropdown-menu'
 
 export function ThemeMenu() {
     const { setTheme, theme } = useTheme()
