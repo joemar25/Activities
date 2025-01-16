@@ -1,12 +1,12 @@
-// https://authjs.dev/getting-started/adapters/prisma
+// prisma\schema.prisma
 generator client {
   provider = "prisma-client-js"
 }
 
 datasource db {
   provider  = "postgresql"
-  url       = env("SUPABASE_DATABASE_URL")
-  directUrl = env("SUPABASE_DIRECT_URL")
+  url       = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 model User {
