@@ -5,10 +5,10 @@ import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardContent } from '@/components/ui/card'
 import Link from 'next/link'
 
-export default function Activity2() {
+export default function CounterApp() {
 
     // State to hold the current count value
-    const [count, setCount] = useState(0)
+    const [count, setCount] = useState(1)
 
     // Function to increment the count
     const increment = () => setCount(count * 2)
@@ -25,7 +25,7 @@ export default function Activity2() {
         >
 
             <Link href={'/activity8/dashboard'} >
-                Navigate to dashboard
+                Navigate to the main dashboard
             </Link >
 
             <Card

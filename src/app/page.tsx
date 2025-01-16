@@ -35,12 +35,12 @@ const activities = [
   },
   {
     title: 'Activity 7',
-    description: `Optional: Add tests to one of the previous activities. Test rendering, 
+    description: `Add tests to one of the previous activities. Test rendering, 
                   labels, and functionality using Jest and React Testing Library.`,
   },
   {
     title: 'Activity 8',
-    description: `Optional: Create a to-do list app using Supabase. Include CRUD operations, 
+    description: `Create a to-do list app using Supabase. Include CRUD operations, 
                   authentication, and persist state on browser restart.`,
   },
 ]
