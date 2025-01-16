@@ -3,12 +3,12 @@
 import { useState } from 'react'
 import { Button } from '@/components/ui/button'
 import { Card, CardHeader, CardContent } from '@/components/ui/card'
-
-const INITIAL = 1
+import Link from 'next/link'
 
 export default function Activity2() {
+
     // State to hold the current count value
-    const [count, setCount] = useState(INITIAL)
+    const [count, setCount] = useState(0)
 
     // Function to increment the count
     const increment = () => setCount(count * 2)
@@ -23,6 +23,11 @@ export default function Activity2() {
             // Added a muted background color
             className="flex flex-col items-center justify-center min-h-screen bg-muted"
         >
+
+            <Link href={'/activity8/dashboard'} >
+                Navigate to dashboard
+            </Link >
+
             <Card
                 // Using a card component for structured layout
                 className="w-full max-w-md p-6 shadow-lg"

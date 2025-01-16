@@ -30,7 +30,7 @@ export default function Activity8() {
 
             if (result.success) {
                 toast.success('Successfully signed in!')
-                router.push('/activity8/dashboard')
+                router.push('/activity8/counter-app')
             } else {
                 toast.error(result.message || 'Something went wrong')
             }
