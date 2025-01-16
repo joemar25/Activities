@@ -22,3 +22,5 @@
 - Prisma is used for database operations
 
 Youtube [Demo](https://www.youtube.com/playlist?list=PLDmArZf1Zrm8am9HzJK65ozCOJAcaV7tV)
+
+Prisma Vercel [Deployment](https://www.prisma.io/docs/orm/more/help-and-troubleshooting/vercel-caching-issue)
