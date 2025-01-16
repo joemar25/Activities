@@ -20,3 +20,5 @@
 - NextAuth is used for authentication
 - Supabase is used for database
 - Prisma is used for database operations
+
+Youtube [Demo](https://www.youtube.com/playlist?list=PLDmArZf1Zrm8am9HzJK65ozCOJAcaV7tV)
